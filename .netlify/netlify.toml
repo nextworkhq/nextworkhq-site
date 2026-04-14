@@ -9,7 +9,6 @@ redirects = []
 [build]
 publish = "/home/admi/.openclaw/workspace/businesses/workflow-crm-automation/deploy"
 publishOrigin = "default"
-base = "/home/admi/.openclaw/workspace/businesses/workflow-crm-automation/deploy"
 
 [build.environment]
 
