@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html class="light" lang="en"><head>
+<html class="light scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Nextwork | Workflow Bottleneck Audit for Service Businesses</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
  tailwind.config = {
  darkMode: "class",
  theme: {
  extend: {
  "colors": {
- "primary": "#2563eb", // Vibrant electric blue accent
+ "primary": "#2563eb",
  "primary-dim": "#1d4ed8",
  "primary-container": "#eff6ff",
  "on-primary": "#ffffff",
- "secondary": "#475569", // Slate blue
+ "secondary": "#475569",
  "secondary-dim": "#334155",
  "on-secondary": "#f8fafc",
  "surface": "#f8fafc",
@@ -50,6 +50,7 @@
  }
  </script>
 <style type="text/tailwindcss">
+ html { scroll-behavior: smooth; }
  body { font-family: 'Inter', sans-serif; }
  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
  .material-symbols-outlined {
@@ -60,7 +61,8 @@
  font-size: 0.6875rem;
  text-transform: uppercase;
  letter-spacing: 0.08em;
- }.node {
+ }
+ .node {
  @apply absolute w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_rgba(37,99,235,0.5)];
  }
  .flow-line {
@@ -69,25 +71,30 @@
  </style>
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-primary-container">
+
+<!-- Header -->
 <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant">
 <nav class="flex justify-between items-center w-full px-12 py-5 max-w-screen-2xl mx-auto">
 <div class="text-xl font-extrabold tracking-tight text-on-background">
  Next<span class="text-primary">work</span>
 </div>
 <div class="hidden md:flex items-center gap-10">
-<a class="text-on-background border-b-2 border-primary pb-1 text-sm font-semibold" href="#process">How It Works</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#process">How It Works</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#results">Results</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#audit">The Audit</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#use-cases">Use Cases</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
 </div>
 <div class="flex items-center gap-6">
-<button class="bg-primary text-on-primary px-7 py-2.5 rounded font-bold text-sm hover:bg-primary-dim transition-all uppercase tracking-wider">
+<a href="#contact" class="bg-primary text-on-primary px-7 py-2.5 rounded font-bold text-sm hover:bg-primary-dim transition-all uppercase tracking-wider">
  Book Audit
- </button>
+ </a>
 </div>
 </nav>
 </header>
+
 <main>
+
+<!-- Hero -->
 <section class="relative bg-surface pt-20 pb-28 overflow-hidden">
 <div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 <div class="lg:col-span-7 z-10">
@@ -99,13 +106,13 @@
  We help UK service-led businesses eliminate messy CRM gaps, slow follow-ups, and admin drag through our Workflow Bottleneck Audit. Less paperwork, more actual work.
  </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-primary text-on-primary px-10 py-5 rounded font-bold text-base hover:shadow-xl hover:bg-primary-dim transition-all flex items-center justify-center gap-2">
+<a href="#contact" class="bg-primary text-on-primary px-10 py-5 rounded font-bold text-base hover:shadow-xl hover:bg-primary-dim transition-all flex items-center justify-center gap-2">
  Book a Bottleneck Audit
  <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<button class="bg-white border border-outline text-on-surface px-10 py-5 rounded font-bold text-base hover:bg-surface-container-low transition-all">
+</a>
+<a href="#process" class="bg-white border border-outline text-on-surface px-10 py-5 rounded font-bold text-base hover:bg-surface-container-low transition-all text-center">
  View Methodology
- </button>
+ </a>
 </div>
 </div>
 <div class="lg:col-span-5 relative">
@@ -173,6 +180,8 @@
 </div>
 <div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-10 translate-x-1/4 skew-x-6 opacity-30"></div>
 </section>
+
+<!-- Problem Section -->
 <section class="bg-white py-32" id="process">
 <div class="max-w-screen-2xl mx-auto px-12">
 <div class="mb-20 max-w-3xl">
@@ -215,6 +224,8 @@
 </div>
 </div>
 </section>
+
+<!-- Audit / How It Works -->
 <section class="py-32 bg-slate-50" id="audit">
 <div class="max-w-screen-2xl mx-auto px-12 flex flex-col lg:flex-row gap-20">
 <div class="lg:w-5/12">
@@ -282,6 +293,8 @@
 </div>
 </div>
 </section>
+
+<!-- Results -->
 <section class="py-32 bg-white" id="results">
 <div class="max-w-screen-2xl mx-auto px-12 text-center mb-20">
 <span class="blueprint-label text-primary font-bold mb-4 block">What Changes</span>
@@ -311,6 +324,79 @@
 </div>
 </div>
 </section>
+
+<!-- Use Cases -->
+<section class="py-32 bg-surface" id="use-cases">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="mb-20 max-w-3xl">
+<span class="blueprint-label text-primary font-bold mb-4 block flex items-center gap-2">
+<span class="w-8 h-[2px] bg-primary"></span>
+ What This Looks Like
+ </span>
+<h2 class="text-4xl font-extrabold text-on-background leading-tight">Real businesses, real friction, real change</h2>
+<p class="mt-4 text-on-surface-variant text-lg">These are composite stories based on the kind of businesses we work with. The details are illustrative, but the problems are genuine.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+<!-- Use Case 1 -->
+<div class="bg-white rounded-lg border border-outline-variant p-10 flex flex-col">
+<div class="mb-6">
+<span class="blueprint-label text-primary font-bold px-3 py-1 bg-primary-container rounded">Marketing Agency</span>
+<span class="blueprint-label text-on-surface-variant ml-2">15 staff</span>
+</div>
+<div class="space-y-5 text-on-surface-variant leading-relaxed flex-1">
+<p>A 15-person agency in the North West was losing deals not because their work wasn't good, but because every new client enquiry got a different experience depending on who picked up the phone. Leads were falling through the cracks between the sales pipeline and the project team. The MD was personally chasing 20+ follow-ups a week because nobody else could see what needed doing.</p>
+<p>We mapped the full enquiry-to-onboarding flow and found 6 places where work was stalling or duplicating. Then we installed automated handoffs between their CRM, inbox, and project tool so nothing sat waiting for someone to remember it.</p>
+<p>The MD got back 15 hours a week. Follow-up time dropped from 2 days to under 4 hours. New client onboarding went from "depends who's around" to a consistent process that runs the same way every time.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant grid grid-cols-3 gap-4">
+<div class="bg-primary-container rounded p-4 text-center">
+<p class="text-2xl font-extrabold text-primary">-15 hrs</p>
+<p class="blueprint-label text-on-surface-variant mt-1">per week for MD</p>
+</div>
+<div class="bg-primary-container rounded p-4 text-center">
+<p class="text-2xl font-extrabold text-primary">4 hrs</p>
+<p class="blueprint-label text-on-surface-variant mt-1">follow-up (was 2 days)</p>
+</div>
+<div class="bg-primary-container rounded p-4 text-center">
+<p class="text-2xl font-extrabold text-primary">6</p>
+<p class="blueprint-label text-on-surface-variant mt-1">friction points removed</p>
+</div>
+</div>
+</div>
+
+<!-- Use Case 2 -->
+<div class="bg-white rounded-lg border border-outline-variant p-10 flex flex-col">
+<div class="mb-6">
+<span class="blueprint-label text-primary font-bold px-3 py-1 bg-primary-container rounded">Accountancy Practice</span>
+<span class="blueprint-label text-on-surface-variant ml-2">28 staff, 4 partners</span>
+</div>
+<div class="space-y-5 text-on-surface-variant leading-relaxed flex-1">
+<p>Four partners, four different ways of tracking client work. Some used spreadsheets, some used the practice management software, some just kept it in their head. During busy season, work was being duplicated, deadlines were being missed, and partners were spending evenings on admin instead of chargeable work.</p>
+<p>We reviewed the full client journey from enquiry through to accounts delivery. Enquiry handling alone had 11 steps and zero automation. We built a single workflow that connected their practice software, email, and task management into one chain. One flow, one source of truth.</p>
+<p>Partners reclaimed an average of 8 hours each per week during busy season. New enquiries now get a response within 2 hours instead of 24 to 48. The senior manager who used to spend half her day coordinating workflows now focuses entirely on client delivery.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant grid grid-cols-3 gap-4">
+<div class="bg-primary-container rounded p-4 text-center">
+<p class="text-2xl font-extrabold text-primary">-8 hrs</p>
+<p class="blueprint-label text-on-surface-variant mt-1">per partner per week</p>
+</div>
+<div class="bg-primary-container rounded p-4 text-center">
+<p class="text-2xl font-extrabold text-primary">2 hrs</p>
+<p class="blueprint-label text-on-surface-variant mt-1">response (was 24-48)</p>
+</div>
+<div class="bg-primary-container rounded p-4 text-center">
+<p class="text-2xl font-extrabold text-primary">11</p>
+<p class="blueprint-label text-on-surface-variant mt-1">steps automated</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Testimonial -->
 <section class="py-24 bg-surface-container-low border-y border-outline-variant">
 <div class="max-w-screen-2xl mx-auto px-12">
 <div class="mt-16 max-w-4xl mx-auto text-center">
@@ -324,53 +410,115 @@
 </div>
 </div>
 </section>
-<section class="py-32 bg-slate-900 relative overflow-hidden" id="contact">
-<div class="max-w-screen-2xl mx-auto px-12 relative z-10 text-center">
-<h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-8">Ready to find out where the friction is?</h2>
-<p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">Get in touch and we'll walk you through how the Workflow Bottleneck Audit works. No pressure, no jargon.</p>
-<button class="bg-primary text-white px-12 py-6 rounded font-extrabold text-lg hover:bg-primary-dim hover:scale-105 transition-all uppercase tracking-widest shadow-xl shadow-primary/20">
+
+<!-- Contact Form -->
+<section class="py-32 bg-surface-container-low" id="contact">
+<div class="max-w-3xl mx-auto px-12">
+<div class="text-center mb-16">
+<span class="blueprint-label text-primary font-bold mb-4 block flex items-center justify-center gap-2">
+<span class="w-8 h-[2px] bg-primary"></span>
  Get In Touch
+ </span>
+<h2 class="text-4xl font-extrabold text-on-background leading-tight">Let's talk about what's slowing you down</h2>
+<p class="mt-4 text-on-surface-variant text-lg">No pitch, no pressure. Tell us what's going on and we'll come back with some honest thoughts on whether we can help.</p>
+</div>
+<form data-netlify="true" name="contact" method="POST" class="bg-white rounded-lg border border-outline-variant p-10 md:p-12 space-y-8">
+<input type="hidden" name="form-name" value="contact"/>
+<p class="hidden"><label>Don't fill this out: <input name="bot-field"/></label></p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">Full Name <span class="text-error">*</span></label>
+<input type="text" name="name" required class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"/>
+</div>
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">Email <span class="text-error">*</span></label>
+<input type="email" name="email" required class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">Company Name</label>
+<input type="text" name="company" class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"/>
+</div>
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">What best describes your business?</label>
+<select name="business_type" class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-white">
+<option value="" disabled selected>Select one</option>
+<option value="Marketing / Creative Agency">Marketing / Creative Agency</option>
+<option value="Accountancy / Finance Practice">Accountancy / Finance Practice</option>
+<option value="Property / Estate Agency">Property / Estate Agency</option>
+<option value="Professional Services">Professional Services</option>
+<option value="Other Service Business">Other Service Business</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">Roughly how many people are in your team?</label>
+<select name="team_size" class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-white">
+<option value="" disabled selected>Select one</option>
+<option value="1-5">1-5</option>
+<option value="6-15">6-15</option>
+<option value="16-30">16-30</option>
+<option value="31-50">31-50</option>
+<option value="51-100">51-100</option>
+<option value="100+">100+</option>
+</select>
+</div>
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">How did you hear about us?</label>
+<select name="referral_source" class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-white">
+<option value="" disabled selected>Select one</option>
+<option value="LinkedIn">LinkedIn</option>
+<option value="Referral">Referral</option>
+<option value="Google Search">Google Search</option>
+<option value="Direct Outreach (Email)">Direct Outreach (Email)</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+<div>
+<label class="blueprint-label text-on-background font-bold mb-2 block">What's the biggest operational drag in your business right now?</label>
+<textarea name="message" rows="4" class="w-full border border-outline rounded px-4 py-3 font-body text-on-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"></textarea>
+<p class="mt-2 text-sm text-on-surface-variant">Think slow follow-ups, messy CRM data, manual admin, dropped handoffs. The stuff your team complains about.</p>
+</div>
+<div class="flex justify-end">
+<button type="submit" class="w-full md:w-auto bg-primary text-on-primary px-12 py-4 rounded font-bold text-base hover:bg-primary-dim transition-all">
+ Send It Through
  </button>
 </div>
-<div class="absolute inset-0 opacity-[0.03]">
-<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+</form>
 </div>
-<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
-<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-[80px]"></div>
 </section>
+
 </main>
+
+<!-- Footer -->
 <footer class="bg-white border-t border-outline-variant">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-screen-2xl mx-auto">
-<div class="md:col-span-1">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 w-full max-w-screen-2xl mx-auto">
+<div>
 <div class="text-lg font-extrabold text-on-background mb-6">Next<span class="text-primary">work</span></div>
 <p class="text-on-surface-variant font-medium text-[0.875rem] leading-relaxed">
  We help service businesses run smoother, faster, and with less admin drag.
+ </p>
+<p class="mt-8 text-on-surface-variant opacity-50 text-[0.75rem]">
+ &copy; 2026 Nextwork. nextworkhq.com
  </p>
 </div>
 <div>
 <h4 class="blueprint-label text-on-background font-bold mb-6">Solutions</h4>
 <ul class="space-y-4">
-<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Workflow Audit</a></li>
-<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">CRM Integration</a></li>
-<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Consultancy Agreement</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#audit">Workflow Review</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#process">CRM Integration</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#contact">Contact</a></li>
 </ul>
 </div>
 <div>
 <h4 class="blueprint-label text-on-background font-bold mb-6">Company</h4>
 <ul class="space-y-4">
-<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">LinkedIn</a></li>
-<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Global Offices</a></li>
-<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div>
-<h4 class="blueprint-label text-on-background font-bold mb-6">Legal</h4>
-<ul class="space-y-4">
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="https://linkedin.com/company/nextworkhq" target="_blank">LinkedIn</a></li>
 <li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
 </ul>
-<p class="mt-12 text-on-surface-variant opacity-50 text-[0.75rem]">
- © 2026 Nextwork. nextworkhq.com
- </p>
 </div>
 </div>
 </footer>
