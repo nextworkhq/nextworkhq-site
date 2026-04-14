@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nextwork | Workflow Bottleneck Audit for Service Businesses</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+ tailwind.config = {
+ darkMode: "class",
+ theme: {
+ extend: {
+ "colors": {
+ "primary": "#2563eb", // Vibrant electric blue accent
+ "primary-dim": "#1d4ed8",
+ "primary-container": "#eff6ff",
+ "on-primary": "#ffffff",
+ "secondary": "#475569", // Slate blue
+ "secondary-dim": "#334155",
+ "on-secondary": "#f8fafc",
+ "surface": "#f8fafc",
+ "surface-bright": "#ffffff",
+ "surface-container-low": "#f1f5f9",
+ "surface-container": "#e2e8f0",
+ "surface-container-high": "#cbd5e1",
+ "surface-container-highest": "#94a3b8",
+ "surface-container-lowest": "#ffffff",
+ "background": "#ffffff",
+ "on-background": "#0f172a",
+ "on-surface": "#1e293b",
+ "on-surface-variant": "#475569",
+ "outline": "#cbd5e1",
+ "outline-variant": "#e2e8f0",
+ "error": "#dc2626",
+ },
+ "borderRadius": {
+ "DEFAULT": "6px",
+ "lg": "8px",
+ "xl": "12px",
+ "full": "9999px"
+ },
+ "fontFamily": {
+ "headline": ["Manrope"],
+ "body": ["Inter"],
+ "label": ["Inter"]
+ }
+ },
+ },
+ }
+ </script>
+<style type="text/tailwindcss">
+ body { font-family: 'Inter', sans-serif; }
+ h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+ .material-symbols-outlined {
+ font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+ }
+ .blueprint-label {
+ font-family: 'Inter';
+ font-size: 0.6875rem;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ }.node {
+ @apply absolute w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_rgba(37,99,235,0.5)];
+ }
+ .flow-line {
+ @apply absolute bg-gradient-to-r from-primary/40 to-transparent h-[1px];
+ }
+ </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container">
+<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-12 py-5 max-w-screen-2xl mx-auto">
+<div class="text-xl font-extrabold tracking-tight text-on-background">
+ Next<span class="text-primary">work</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-on-background border-b-2 border-primary pb-1 text-sm font-semibold" href="#process">How It Works</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#results">Results</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#audit">The Audit</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-7 py-2.5 rounded font-bold text-sm hover:bg-primary-dim transition-all uppercase tracking-wider">
+ Book Audit
+ </button>
+</div>
+</nav>
+</header>
+<main>
+<section class="relative bg-surface pt-20 pb-28 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="blueprint-label text-primary font-bold mb-6 block px-3 py-1 bg-primary-container w-fit rounded">Operational Precision for UK Service Businesses</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-on-background leading-[1.1] mb-8">
+ Stop the Operational Leakage. Turn Your Enquiry-to-Delivery Process Into a <span class="text-primary">Well-Oiled Machine.</span>
+</h1>
+<p class="text-lg lg:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+ We help UK service-led businesses eliminate messy CRM gaps, slow follow-ups, and admin drag through our Workflow Bottleneck Audit. Less paperwork, more actual work.
+ </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded font-bold text-base hover:shadow-xl hover:bg-primary-dim transition-all flex items-center justify-center gap-2">
+ Book a Bottleneck Audit
+ <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-white border border-outline text-on-surface px-10 py-5 rounded font-bold text-base hover:bg-surface-container-low transition-all">
+ View Methodology
+ </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-slate-900 rounded-xl overflow-hidden shadow-2xl relative border border-slate-800">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.15),transparent)]"></div>
+<div class="h-10 border-b border-slate-800 bg-slate-900/50 backdrop-blur flex items-center px-4 gap-2">
+<div class="flex gap-1.5">
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+</div>
+<div class="mx-auto text-[10px] text-slate-500 uppercase tracking-widest font-bold">Pipeline Engine v4.2</div>
+</div>
+<div class="p-8 relative h-full">
+<div class="absolute inset-0 p-12 opacity-40">
+<svg class="w-full h-full" fill="none" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 100 Q 200 150 350 100" stroke="#2563eb" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M50 250 Q 200 200 350 250" stroke="#2563eb" stroke-width="2"></path>
+<path d="M50 400 Q 200 350 350 400" stroke="#2563eb" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle cx="50" cy="100" fill="#2563eb" r="4"></circle>
+<circle cx="350" cy="100" fill="#2563eb" r="4"></circle>
+<circle cx="50" cy="250" fill="#2563eb" r="6"></circle>
+<circle cx="350" cy="250" fill="#2563eb" r="6"></circle>
+<circle cx="50" cy="400" fill="#2563eb" r="4"></circle>
+<circle cx="350" cy="400" fill="#2563eb" r="4"></circle>
+</svg>
+</div>
+<div class="relative space-y-4">
+<div class="bg-slate-800/80 backdrop-blur p-4 rounded-lg border border-slate-700/50 shadow-lg">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] text-slate-400 font-bold uppercase">Enquiry Intake</span>
+<span class="text-primary text-[10px] font-bold">+12%</span>
+</div>
+<div class="h-2 w-full bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/20 p-5 rounded-lg shadow-inner">
+<span class="text-[10px] text-primary/80 font-bold uppercase block mb-1">Lead Flow Efficiency</span>
+<div class="text-2xl font-bold text-white tracking-tight">Active Optimization</div>
+<div class="mt-4 grid grid-cols-3 gap-2">
+<div class="h-12 bg-primary/20 rounded"></div>
+<div class="h-12 bg-primary/40 rounded"></div>
+<div class="h-12 bg-primary/20 rounded"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-800/80 backdrop-blur p-4 rounded-lg border border-slate-700/50">
+<span class="text-[10px] text-slate-400 font-bold uppercase block mb-1">Avg Response</span>
+<div class="text-xl font-bold text-white">4.2m</div>
+</div>
+<div class="bg-slate-800/80 backdrop-blur p-4 rounded-lg border border-slate-700/50">
+<span class="text-[10px] text-slate-400 font-bold uppercase block mb-1">Conversion</span>
+<div class="text-xl font-bold text-white">31.8%</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-8 bg-white p-7 rounded shadow-xl border border-outline-variant max-w-xs hidden xl:block">
+<p class="text-4xl font-extrabold text-primary mb-2">94%</p>
+<p class="text-xs blueprint-label text-on-surface-variant font-semibold">Average reduction in lead response time post-audit</p>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -z-10 translate-x-1/4 skew-x-6 opacity-30"></div>
+</section>
+<section class="bg-white py-32" id="process">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="mb-20 max-w-3xl">
+<span class="blueprint-label text-error font-bold mb-4 block flex items-center gap-2">
+<span class="w-8 h-[2px] bg-error"></span>
+ The Problem
+ </span>
+<h2 class="text-4xl font-extrabold text-on-background leading-tight">The drag that sits between enquiry and delivery</h2>
+<p class="mt-4 text-on-surface-variant text-lg">When your best people are spending their time chasing, patching, and manually moving work forward, growth stalls.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-10 bg-surface rounded-lg border border-outline-variant hover:border-primary/30 hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mb-6 shadow-sm border border-outline-variant group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-icon="timer_off">timer_off</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Slow Follow-ups</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Enquiries languish in inboxes while competitors close deals. Your 'leaky bucket' is costing 30% of revenue.</p>
+</div>
+<div class="p-10 bg-surface rounded-lg border border-outline-variant hover:border-primary/30 hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mb-6 shadow-sm border border-outline-variant group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-icon="leak_remove">leak_remove</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Dropped Leads</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">No clear handover between sales and operations. High-value leads disappear between spreadsheet tabs.</p>
+</div>
+<div class="p-10 bg-surface rounded-lg border border-outline-variant hover:border-primary/30 hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mb-6 shadow-sm border border-outline-variant group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-icon="sync_problem">sync_problem</span>
+</div>
+<h3 class="text-xl font-bold mb-4">CRM Friction</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Your team treats the CRM as a burden, not a tool. Dirty data makes forecasting impossible.</p>
+</div>
+<div class="p-10 bg-surface rounded-lg border border-outline-variant hover:border-primary/30 hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-white rounded flex items-center justify-center mb-6 shadow-sm border border-outline-variant group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-icon="person_search">person_search</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Founder Admin Drag</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">You're still the only person who knows how to move a project through the pipeline. You are the bottleneck.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-slate-50" id="audit">
+<div class="max-w-screen-2xl mx-auto px-12 flex flex-col lg:flex-row gap-20">
+<div class="lg:w-5/12">
+<span class="blueprint-label text-primary font-bold mb-4 block">The Workflow Bottleneck Audit</span>
+<h2 class="text-4xl font-extrabold text-on-background mb-8">Find what's stuck. Fix what matters.</h2>
+<p class="text-on-surface-variant mb-12 text-lg">We map your workflow from enquiry to delivery, find where work is slowing down or leaking, and fix the parts that matter most.</p>
+<div class="space-y-0 border-l border-primary/20 ml-1">
+<div class="pl-8 pb-12 relative">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-primary rounded-full"></div>
+<h4 class="font-bold text-lg mb-2">Phase 01: The Friction Map</h4>
+<p class="text-sm text-on-surface-variant">A 48-point deep dive into your current CRM and communication stacks to identify precisely where leads are lost.</p>
+</div>
+<div class="pl-8 pb-12 relative">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline rounded-full"></div>
+<h4 class="font-bold text-lg mb-2">Phase 02: Structural Engineering</h4>
+<p class="text-sm text-on-surface-variant">Designing the automation layer that handles lead capture, nurturing, and internal task handovers without human error.</p>
+</div>
+<div class="pl-8 relative">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline rounded-full"></div>
+<h4 class="font-bold text-lg mb-2">Phase 03: Precision Deployment</h4>
+<p class="text-sm text-on-surface-variant">Hard-coding the workflows into your environment with full documentation and team training for immediate adoption.</p>
+</div>
+</div>
+</div>
+<div class="lg:w-7/12">
+<div class="bg-white p-12 rounded-lg shadow-xl shadow-slate-200/50 border border-outline-variant">
+<div class="flex items-center justify-between mb-10 pb-6 border-b border-surface-container-low">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-primary-container p-2 rounded" data-icon="analytics">analytics</span>
+<h3 class="font-bold text-xl uppercase tracking-tighter">Diagnostic Dashboard</h3>
+</div>
+<div class="flex gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-slate-200"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-slate-200"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-surface rounded-lg p-6 border border-outline-variant flex items-center justify-between">
+<div>
+<p class="blueprint-label text-on-surface-variant mb-1">Lead Handling Efficiency</p>
+<p class="text-2xl font-extrabold text-secondary">Pre-Audit: <span class="text-error">34%</span></p>
+</div>
+<span class="material-symbols-outlined text-error" data-icon="trending_down">trending_down</span>
+</div>
+<div class="bg-primary text-on-primary rounded-lg p-6 flex items-center justify-between shadow-lg shadow-primary/20">
+<div>
+<p class="blueprint-label opacity-80 mb-1">Post-Implementation Target</p>
+<p class="text-2xl font-extrabold">Projected: 98%</p>
+</div>
+<span class="material-symbols-outlined text-on-primary" data-icon="bolt" data-weight="fill">bolt</span>
+</div>
+<div class="grid grid-cols-2 gap-6 pt-4">
+<div class="border border-outline-variant p-6 rounded-lg bg-white">
+<p class="blueprint-label text-on-surface-variant mb-2">Admin Hours/Wk</p>
+<p class="text-3xl font-extrabold text-on-background">-15hrs</p>
+</div>
+<div class="border border-outline-variant p-6 rounded-lg bg-white">
+<p class="blueprint-label text-on-surface-variant mb-2">Delivery Velocity</p>
+<p class="text-3xl font-extrabold text-primary">+40%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-white" id="results">
+<div class="max-w-screen-2xl mx-auto px-12 text-center mb-20">
+<span class="blueprint-label text-primary font-bold mb-4 block">What Changes</span>
+<h2 class="text-4xl font-extrabold text-on-background">Smoother work, less drag</h2>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="visibility">visibility</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Operational Clarity</h3>
+<p class="text-on-surface-variant leading-relaxed">Real-time visibility into every client journey. No more guessing what's stuck or who is responsible.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="speed">speed</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Faster Follow-through</h3>
+<p class="text-on-surface-variant leading-relaxed">Automated triggers ensure leads are contacted within minutes, not days. Strike while the intent is at its highest.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Reduced Admin Drag</h3>
+<p class="text-on-surface-variant leading-relaxed">Release your team from manual data entry and 'status update' meetings. Focus talent on delivery, not paperwork.</p>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="mt-16 max-w-4xl mx-auto text-center">
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary/30 text-6xl" style="font-variation-settings: 'FILL' 1">format_quote</span>
+</div>
+<blockquote class="text-2xl font-medium text-on-surface leading-relaxed">
+ "We were spending nearly two days a week just keeping on top of follow-ups and admin. After the audit, that dropped to half a day. The team actually has time to do proper work now."
+ </blockquote>
+<p class="mt-8 font-bold text-primary">Operations Director, North West Marketing Agency</p>
+</div>
+</div>
+</section>
+<section class="py-32 bg-slate-900 relative overflow-hidden" id="contact">
+<div class="max-w-screen-2xl mx-auto px-12 relative z-10 text-center">
+<h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-8">Ready to find out where the friction is?</h2>
+<p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">Get in touch and we'll walk you through how the Workflow Bottleneck Audit works. No pressure, no jargon.</p>
+<button class="bg-primary text-white px-12 py-6 rounded font-extrabold text-lg hover:bg-primary-dim hover:scale-105 transition-all uppercase tracking-widest shadow-xl shadow-primary/20">
+ Get In Touch
+ </button>
+</div>
+<div class="absolute inset-0 opacity-[0.03]">
+<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-[80px]"></div>
+</section>
+</main>
+<footer class="bg-white border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-screen-2xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-lg font-extrabold text-on-background mb-6">Next<span class="text-primary">work</span></div>
+<p class="text-on-surface-variant font-medium text-[0.875rem] leading-relaxed">
+ We help service businesses run smoother, faster, and with less admin drag.
+ </p>
+</div>
+<div>
+<h4 class="blueprint-label text-on-background font-bold mb-6">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Workflow Audit</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">CRM Integration</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Consultancy Agreement</a></li>
+</ul>
+</div>
+<div>
+<h4 class="blueprint-label text-on-background font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Global Offices</a></li>
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="blueprint-label text-on-background font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant text-[0.875rem] hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+<p class="mt-12 text-on-surface-variant opacity-50 text-[0.75rem]">
+ © 2026 Nextwork. nextworkhq.com
+ </p>
+</div>
+</div>
+</footer>
+
+</body></html>
